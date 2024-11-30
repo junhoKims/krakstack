@@ -3,8 +3,25 @@
   "version": "1.0.0",
   "description": "krak workspace",
   "author": "junhoKims",
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules && pnpm -r exec rm -rf .next && pnpm store prune && pnpm install",
+    "clean:turbo": "rm -rf .turbo && pnpm -r exec rm -rf .turbo"
+  },
+  "devDependencies": {
+    "prettier": "3.4.1",
+    "turbo": "2.3.3",
+    "typescript": "5.7.2"
+  },
+  "packageManager": "pnpm@9.14.4",
+  "engines": {
+    "node": ">=20"
+  },
   "volta": {
     "node": "20.14.0",
     "pnpm": "9.14.4"
-  }
+  }  
 }
