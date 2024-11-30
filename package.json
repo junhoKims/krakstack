@@ -1,0 +1,10 @@
+{
+  "name": "krak",
+  "version": "1.0.0",
+  "description": "krak workspace",
+  "author": "junhoKims",
+  "volta": {
+    "node": "20.14.0",
+    "pnpm": "9.14.4"
+  }
+}
