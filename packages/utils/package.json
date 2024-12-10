@@ -1,0 +1,14 @@
+{
+  "name": "@krak/utils",
+  "version": "0.0.1",
+  "description": "krak utils",
+  "author": "junhoKims",
+  "license": "MIT",
+  "type": "module",
+  "devDependencies": {
+    "@krak/typescript-config": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
