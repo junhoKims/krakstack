@@ -16,6 +16,6 @@
     "verbatimModuleSyntax": true,
     "module": "NodeNext",
     "moduleDetection": "force",
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "nodenext"
   }
 }
