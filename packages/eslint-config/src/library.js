@@ -13,6 +13,7 @@ export const config = [
     rules: {
       '@typescript-eslint/no-import-type-side-effects': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/no-non-null-assertion': 'off',
     },
   },
 ];

@@ -1,13 +1,13 @@
 import globals from 'globals';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginReact from 'eslint-plugin-react';
-import { config as baseConfig } from './base.js';
+import { config as libraryConfig } from './library.js';
 
 /**
  * @type {import("eslint").Linter.Config}
  */
 export const config = [
-  ...baseConfig,
+  ...libraryConfig,
   {
     name: 'Config react plugin',
     ...pluginReact.configs.flat.recommended,
@@ -41,8 +41,10 @@ export const config = [
     name: 'Config LanguageOption For React',
     languageOptions: {
       ecmaVersion: 'latest',
-      ecmaFeatures: {
-        jsx: true,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
       ...pluginReact.configs.flat.recommended.languageOptions,
       globals: {
