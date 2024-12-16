@@ -1,3 +1,4 @@
+import tseslint from 'typescript-eslint';
 import unusedImports from 'eslint-plugin-unused-imports';
 import turboPlugin from 'eslint-plugin-turbo';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
@@ -19,13 +20,23 @@ export const config = [
     name: 'Config Prettier',
     ...eslintPluginPrettierRecommended,
   },
+  ...tseslint.config({
+    name: 'Config Typescript',
+    files: ['**/*.{ts,tsx}'],
+    extends: [tseslint.configs.strictTypeChecked, tseslint.configs.stylisticTypeChecked],
+    rules: {
+      '@typescript-eslint/no-import-type-side-effects': 'error',
+      '@typescript-eslint/consistent-type-imports': 'error',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+    },
+  }),
   {
     name: 'Config LanguageOption',
     languageOptions: {
       ecmaVersion: 'latest',
       parserOptions: {
         projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        tsconfigRootDir: process.cwd(),
       },
     },
   },

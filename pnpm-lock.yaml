@@ -11,6 +11,9 @@ importers:
       '@krak/eslint-config':
         specifier: workspace:^
         version: link:packages/eslint-config
+      '@krak/typescript-config':
+        specifier: workspace:^
+        version: link:packages/typescript-config
       eslint:
         specifier: 9.16.0
         version: 9.16.0

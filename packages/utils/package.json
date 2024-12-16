@@ -5,6 +5,9 @@
   "author": "junhoKims",
   "license": "MIT",
   "type": "module",
+  "scripts": {
+    "check:lint": "eslint --quiet --cache \"**/*.{ts,tsx,js,jsx}\""
+  },
   "devDependencies": {
     "@krak/eslint-config": "workspace:^",
     "@krak/typescript-config": "workspace:*"
