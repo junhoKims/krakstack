@@ -1,0 +1,27 @@
+{
+  "name": "@krak/next-app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "dev:webpack": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "check:lint": "next lint --dir src",
+    "check:type": "tsc -p tsconfig.json --noEmit --incremental"
+  },
+  "dependencies": {
+    "@krak/ui": "workspace:^",
+    "next": "15.1.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@krak/eslint-config": "workspace:^",
+    "@krak/prettier-config": "workspace:^",
+    "@krak/typescript-config": "workspace:^",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19"
+  }
+}
