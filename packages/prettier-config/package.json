@@ -1,0 +1,14 @@
+{
+  "name": "@krak/prettier-config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "0.6.9"
+  }
+}
