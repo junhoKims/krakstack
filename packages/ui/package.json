@@ -8,16 +8,28 @@
   ],
   "exports": {
     "./base": {
-      "require": "./dist/core/index.cjs",
-      "import": "./dist/core/index.mjs",
-      "default": "./dist/core/index.mjs",
-      "types": "./dist/core/index.d.ts"
+      "require": "./dist/base/index.cjs",
+      "import": "./dist/base/index.mjs",
+      "default": "./dist/base/index.mjs",
+      "types": "./dist/base/index.d.ts"
     },
     "./core": {
       "require": "./dist/core/index.cjs",
       "import": "./dist/core/index.mjs",
       "default": "./dist/core/index.mjs",
       "types": "./dist/core/index.d.ts"
+    },
+    "./assets": {
+      "require": "./dist/assets/index.cjs",
+      "import": "./dist/assets/index.mjs",
+      "default": "./dist/assets/index.mjs",
+      "types": "./dist/assets/index.d.ts"
+    },
+    "./configs": {
+      "require": "./dist/configs/index.cjs",
+      "import": "./dist/configs/index.mjs",
+      "default": "./dist/configs/index.mjs",
+      "types": "./dist/configs/index.d.ts"
     },
     "./*": {
       "require": "./dist/*/index.cjs",

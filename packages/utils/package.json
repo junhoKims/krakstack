@@ -4,6 +4,9 @@
   "description": "krak utils",
   "author": "junhoKims",
   "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "scripts": {
     "check:lint": "eslint --fix --cache .",
     "check:type": "tsc -p tsconfig.json --noEmit --incremental",

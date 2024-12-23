@@ -1,12 +1,13 @@
 import path from 'node:path';
 import { readFile } from 'node:fs/promises';
+import preserveDirectives from 'rollup-preserve-directives';
 import { defineRollupSwcOption, swc } from 'rollup-plugin-swc3';
 import postcss from 'rollup-plugin-postcss';
 import { globSync } from 'glob';
 import svgr from '@svgr/rollup';
-import url from '@rollup/plugin-url';
 import nodeResolve from '@rollup/plugin-node-resolve';
 import json from '@rollup/plugin-json';
+import image from '@rollup/plugin-image';
 import commonjs from '@rollup/plugin-commonjs';
 import { isFileExcluded } from './utils/is-file-excluded.js';
 
@@ -29,8 +30,7 @@ export const defineRollupConfig = async ({
   postcssOptions,
 }) => {
   const packagePath = path.join(packageDir, 'package.json');
-  const packageJSON = JSON.parse(await readFile(new URL(packagePath, import.meta.url)));
-
+  const packageJSON = JSON.parse(await readFile(new URL(packagePath, import.meta.url), 'utf8'));
   /**
    * module 방식에 따라 번들 설정 생성
    *
@@ -58,8 +58,8 @@ export const defineRollupConfig = async ({
         entryFileNames: (chunkInfo) => {
           const fileExtension = `.${chunkInfo.facadeModuleId.split('/').pop()?.split('.')?.pop() || 'js'}`;
           const moduleExtension = format === 'es' ? '.mjs' : '.cjs';
-          const isBundledFile = ['.js', '.jsx', '.ts', '.tsx', '.svg'].includes(fileExtension);
-          return isBundledFile ? `[name]${moduleExtension}` : `[name]${fileExtension}`;
+          const isMaintainExtension = ['.d.ts', '.d.cts', '.d.mts'].includes(fileExtension);
+          return isMaintainExtension ? `[name]${fileExtension}` : `[name]${moduleExtension}`;
         },
 
         preserveModules: true,
@@ -73,12 +73,12 @@ export const defineRollupConfig = async ({
         commonjs(),
         nodeResolve(),
         json(),
+        image({ dom: true }),
         postcss({
           minimize: true,
           extract: `styles/styles.css`,
           ...postcssOptions,
         }),
-        url(),
         svgr({
           icon: true,
           memo: true,
@@ -111,6 +111,7 @@ export const defineRollupConfig = async ({
             },
           })
         ),
+        preserveDirectives(),
       ],
     };
   };

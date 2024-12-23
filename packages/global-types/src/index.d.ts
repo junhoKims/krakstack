@@ -1,4 +1,5 @@
 import './svgr.d.ts';
+import './img.d.ts';
 
 /** 전역으로 사용할 수 있는 ValueOf 제네릭 타입 */
 declare global {
