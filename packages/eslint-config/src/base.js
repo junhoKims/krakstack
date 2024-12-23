@@ -1,4 +1,5 @@
 import tseslint from 'typescript-eslint';
+import globals from 'globals';
 import unusedImports from 'eslint-plugin-unused-imports';
 import turboPlugin from 'eslint-plugin-turbo';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
@@ -22,23 +23,18 @@ export const config = [
   },
   ...tseslint.config({
     name: 'Config Typescript',
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.{ts,tsx,d.cts,d.ts,d.mts}'],
     extends: [tseslint.configs.strictTypeChecked, tseslint.configs.stylisticTypeChecked],
     rules: {
       '@typescript-eslint/no-import-type-side-effects': 'error',
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/prefer-reduce-type-parameter': 'off',
     },
   }),
   {
-    name: 'Config LanguageOption',
-    languageOptions: {
-      ecmaVersion: 'latest',
-      parserOptions: {
-        projectService: true,
-        tsconfigRootDir: process.cwd(),
-      },
-    },
+    name: 'Config ignore patterns',
+    ignores: ['node_modules/**', 'dist/**', 'build/**', 'storybook-static'],
   },
   {
     name: 'Config import plugin',
@@ -113,7 +109,16 @@ export const config = [
     },
   },
   {
-    name: 'Config ignore patterns',
-    ignores: ['node_modules/**', 'dist/**', 'build/**', 'storybook-static'],
+    name: 'Config LanguageOption',
+    languageOptions: {
+      ecmaVersion: 'latest',
+      globals: {
+        ...globals.node,
+      },
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: process.cwd(),
+      },
+    },
   },
 ];
