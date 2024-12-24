@@ -1,11 +1,11 @@
 # krak
 
-'Krak' workspace
+빠른 사용을 위한 개인 패키지 모음 및 테스트 공간
 
 ## TOODS
 
 할 일
 
-- [ ] utils
-- [ ] react
-- [ ] types
+- [ ] `@krak/utils` 코드 구현
+- [ ] `@krak/ui` 코드 구현
+- [ ] 패키지 배포

@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Auto Assign Author To PR
-        uses: technote-space/assign-author@v1.6.2
+        uses: technote-space/assign-author@v1
