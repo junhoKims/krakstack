@@ -1,0 +1,40 @@
+# 해당 파일을 참고하여 라벨링 수행
+# https://github.com/actions/labeler
+
+feat:
+  - head-branch: ['^feat', 'feat/']
+
+fix:
+  - head-branch: ['^fix', 'fix/']
+
+chore:
+  - head-branch: ['^chore', 'chore/']
+
+test:
+  - head-branch: ['^test', 'test/']
+
+style:
+  - head-branch: ['^style', 'style/']
+
+refactor:
+  - head-branch: ['^refactor', 'refactor/']
+
+docs:
+  - head-branch: ['^docs', 'docs/']
+  - changed-files:
+    - any-glob-to-any-file: '**/*.md'
+
+test:
+  - head-branch: ['^test', 'test/']
+
+github:
+  - changed-files:
+    - any-glob-to-any-file: '.github/**'
+
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file: 'pnpm-lock.yaml'
+
+packages:
+  - changed-files:
+    - any-glob-to-any-file: 'packages/**'
