@@ -1,8 +1,10 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "@krak/typescript-config/react-internal.json",
   "compilerOptions": {
-    "outDir": "dist"
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
-  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,29 +1,65 @@
 {
   "name": "@krak/ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "private": true,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx"
+    "./base": {
+      "require": "./dist/base/index.cjs",
+      "import": "./dist/base/index.mjs",
+      "default": "./dist/base/index.mjs",
+      "types": "./dist/base/index.d.ts"
+    },
+    "./core": {
+      "require": "./dist/core/index.cjs",
+      "import": "./dist/core/index.mjs",
+      "default": "./dist/core/index.mjs",
+      "types": "./dist/core/index.d.ts"
+    },
+    "./assets": {
+      "require": "./dist/assets/index.cjs",
+      "import": "./dist/assets/index.mjs",
+      "default": "./dist/assets/index.mjs",
+      "types": "./dist/assets/index.d.ts"
+    },
+    "./configs": {
+      "require": "./dist/configs/index.cjs",
+      "import": "./dist/configs/index.mjs",
+      "default": "./dist/configs/index.mjs",
+      "types": "./dist/configs/index.d.ts"
+    },
+    "./*": {
+      "require": "./dist/*/index.cjs",
+      "import": "./dist/*/index.mjs",
+      "default": "./dist/*/index.mjs",
+      "types": "./dist/*/index.d.ts"
+    },
+    "./styles-ui.css": "./dist/styles/styles-ui.css"
   },
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "generate:component": "turbo gen react-component",
-    "check-types": "tsc --noEmit"
+    "check:lint": "eslint --fix --cache .",
+    "check:type": "tsc -p tsconfig.json --noEmit --incremental",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && rollup -c rollup.config.js --silent"
   },
   "devDependencies": {
     "@krak/eslint-config": "workspace:*",
+    "@krak/prettier-config": "workspace:^",
+    "@krak/rollup-config": "workspace:^",
     "@krak/typescript-config": "workspace:*",
-    "@turbo/gen": "^1.12.4",
-    "@types/node": "^20.11.24",
-    "@types/react": "18.3.0",
-    "@types/react-dom": "18.3.1",
-    "typescript": "5.5.4"
+    "@types/global-types": "workspace:^",
+    "@types/node": "22.10.2",
+    "@types/react": ">=18",
+    "@types/react-dom": ">=18",
+    "react": ">=18",
+    "react-dom": ">=18"
   },
-  "dependencies": {
-    "react": "19.0.0-rc-5c56b873-20241107",
-    "react-dom": "19.0.0-rc-5c56b873-20241107"
+  "peerDependencies": {
+    "@types/react": ">=18",
+    "@types/react-dom": ">=18",
+    "react": ">=18",
+    "react-dom": ">=18"
   }
 }
