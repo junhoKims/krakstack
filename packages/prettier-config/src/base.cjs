@@ -1,7 +1,7 @@
 /**
  * @type {import("prettier").Config}
  */
-export const base = {
+module.exports = {
   arrowParens: 'always',
   bracketSameLine: false,
   bracketSpacing: true,
@@ -14,5 +14,5 @@ export const base = {
   singleQuote: true,
   tabWidth: 2,
   trailingComma: 'es5',
-  plugins: ['prettier-plugin-tailwindcss'],
+  plugins: [require.resolve('prettier-plugin-tailwindcss')],
 };

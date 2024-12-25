@@ -2,7 +2,7 @@ name: 🏷️ Auto Apply Labels
 
 on:
   pull_request:
-    types: [opened, reopened, synchronize]
+    types: [opened, reopened]
 
 jobs:
   auto-labelling:

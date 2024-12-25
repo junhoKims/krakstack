@@ -15,7 +15,7 @@ export const withComma = (value: string | number) => {
   const number = typeof value === 'string' ? Number.parseFloat(value.replace(/,/g, '')) : value;
 
   if (isNaN(number)) {
-    return value.toString();
+    throw new Error('NaN은 허용하지 않습니다');
   }
 
   return number.toLocaleString('ko-KR');
