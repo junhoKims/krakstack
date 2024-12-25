@@ -1,15 +1,19 @@
 import tseslint from 'typescript-eslint';
 import globals from 'globals';
 import unusedImports from 'eslint-plugin-unused-imports';
-import turboPlugin from 'eslint-plugin-turbo';
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import importPlugin from 'eslint-plugin-import';
 import js from '@eslint/js';
 
 /**
+ * eslint 프리셋 base.js와 동일
+ *
  * @type {import("eslint").Linter.Config}
  */
-export const config = [
+export default [
+  {
+    files: ['**/*.{js,cjs,mjs,ts,d.ts}'],
+  },
   {
     name: 'Config ESLint',
     ...js.configs.recommended,
@@ -91,20 +95,6 @@ export const config = [
           varsIgnorePattern: '^_',
           args: 'after-used',
           argsIgnorePattern: '^_',
-        },
-      ],
-    },
-  },
-  {
-    name: 'Config turbo plugin',
-    plugins: {
-      turbo: turboPlugin,
-    },
-    rules: {
-      'turbo/no-undeclared-env-vars': [
-        'warn',
-        {
-          allowList: ['NEXT_PUBLIC_*'],
         },
       ],
     },

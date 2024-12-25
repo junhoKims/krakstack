@@ -6,7 +6,6 @@
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "devDependencies": {
-    "@krak/typescript-config": "workspace:*",
     "@next/eslint-plugin-next": "^15",
     "@typescript-eslint/eslint-plugin": "8.18.0",
     "@typescript-eslint/parser": "8.18.0",
