@@ -12,6 +12,8 @@ chore:
 
 test:
   - head-branch: ['^test', 'test/']
+  - changed-files:
+    - any-glob-to-any-file: '**/*.test.{ts,tsx,js,jsx}'
 
 style:
   - head-branch: ['^style', 'style/']
