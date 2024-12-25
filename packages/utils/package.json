@@ -10,6 +10,10 @@
   "scripts": {
     "check:lint": "eslint --fix --cache .",
     "check:type": "tsc -p tsconfig.json --noEmit --incremental",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui",
     "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && rollup -c rollup.config.js --silent"
   },
   "devDependencies": {
@@ -17,6 +21,8 @@
     "@krak/prettier-config": "workspace:^",
     "@krak/rollup-config": "workspace:^",
     "@krak/typescript-config": "workspace:*",
+    "@krak/vitest-config": "workspace:^",
+    "@types/global-types": "workspace:^",
     "@types/node": "22.10.2",
     "@types/react": ">=18",
     "@types/react-dom": ">=18",

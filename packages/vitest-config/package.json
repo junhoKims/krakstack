@@ -1,0 +1,12 @@
+{
+  "name": "@krak/vitest-config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "scripts": {
+    "check:lint": "eslint --fix --cache .",
+    "check:type": "tsc -p tsconfig.json --noEmit --incremental"
+  }
+}
