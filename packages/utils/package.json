@@ -7,6 +7,26 @@
   "sideEffects": [
     "**/*.css"
   ],
+  "exports": {
+    "./common": {
+      "require": "./dist/common/index.cjs",
+      "import": "./dist/common/index.mjs",
+      "default": "./dist/common/index.mjs",
+      "types": "./dist/common/index.d.ts"
+    },
+    "./react": {
+      "require": "./dist/react/index.cjs",
+      "import": "./dist/react/index.mjs",
+      "default": "./dist/react/index.mjs",
+      "types": "./dist/react/index.d.ts"
+    },
+    "./*": {
+      "require": "./dist/*/index.cjs",
+      "import": "./dist/*/index.mjs",
+      "default": "./dist/*/index.mjs",
+      "types": "./dist/*/index.d.ts"
+    }
+  },
   "scripts": {
     "check:lint": "eslint --fix --cache .",
     "check:type": "tsc -p tsconfig.json --noEmit --incremental",
