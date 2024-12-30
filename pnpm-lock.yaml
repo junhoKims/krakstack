@@ -87,6 +87,9 @@ importers:
       '@krak/typescript-config':
         specifier: workspace:^
         version: link:../../packages/typescript-config
+      '@krak/utils':
+        specifier: workspace:^
+        version: link:../../packages/utils
       '@types/node':
         specifier: ^20
         version: 20.17.9
