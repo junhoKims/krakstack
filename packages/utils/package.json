@@ -36,6 +36,9 @@
     "test:ui": "vitest --ui",
     "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && rollup -c rollup.config.js --silent"
   },
+  "dependencies": {
+    "dayjs": "1.11.13"
+  },
   "devDependencies": {
     "@krak/eslint-config": "workspace:^",
     "@krak/prettier-config": "workspace:^",
