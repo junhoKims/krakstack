@@ -20,8 +20,10 @@
 {
   "compilerOptions": {
     "types": [
-      "@types/node",
-      "@krak/global-types"
+      "node",
+      "react",
+      "react-dom",
+      "global-types"
     ]
   }
 }

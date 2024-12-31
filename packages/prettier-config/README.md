@@ -10,6 +10,12 @@
 
 ## 사용
 
+라이브러리에서 Prettier 프리셋 적용
+
+- `base` -> 기본적인 prettier 셋업
+
+
+
 ```
 // prettier.config.js
 import { baseConfig } from '@krak/prettier-config';

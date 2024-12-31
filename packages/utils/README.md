@@ -8,7 +8,7 @@
 
 - [x] ESLint, Typescript 구성
 - [x] rollup으로 번들링되도록 구성
-- [ ] 함수 구현
+- [ ] npm 패키지 배포
 
 ## 사용
 

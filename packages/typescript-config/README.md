@@ -11,6 +11,10 @@
 ## 사용
 
 라이브러리에서 타입스크립트 프리셋 적용
+- `base` -> 기본적인 ts 셋업
+- `library` -> ui없거나 기본적인 기능이 담긴 라이브러리를 위한 ts 셋업
+- `react-internal` -> react가 포함된 라이브러리 or 앱을 위한 ts 셋업
+- `nextjs` -> nextjs 앱을 위한 ts 셋업
 
 ```
 {

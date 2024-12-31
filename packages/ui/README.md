@@ -10,6 +10,7 @@
 - [ ] `tailwindcss` 설정 구성
 - [ ] `storybook` 설정 구성
 - [ ] `Button` 컴포넌트 구현
+- [ ] npm 패키지 배포
 
 ## 사용
 
