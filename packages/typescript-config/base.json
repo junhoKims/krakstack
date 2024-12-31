@@ -7,7 +7,7 @@
     "declarationMap": true,
     "resolveJsonModule": true,
     "target": "ESNext",
-    "lib": ["es2022", "dom", "dom.iterable"],
+    "lib": ["ESNext", "dom", "dom.iterable"],
     "strict": true,
     "esModuleInterop": true,
     "isolatedModules": true,
