@@ -1,6 +1,6 @@
 import { useEffect, useLayoutEffect } from 'react';
 import { renderHook } from '@testing-library/react';
-import * as clientUtils from '@/common/get-is-client.js';
+import * as clientUtils from '@/commons/get-is-client.js';
 
 vi.mock('react', async () => ({
   ...(await vi.importActual('react')),

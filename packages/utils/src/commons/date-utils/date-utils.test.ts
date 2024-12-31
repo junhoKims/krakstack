@@ -1,4 +1,4 @@
-import { dateUtils } from '@/common/date-utils/date-utils.js';
+import { dateUtils } from '@/commons/date-utils/date-utils.js';
 
 const INVALIDE_DATE = null;
 
