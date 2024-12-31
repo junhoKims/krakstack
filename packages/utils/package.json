@@ -1,5 +1,5 @@
 {
-  "name": "@krak/utils",
+  "name": "@krakstack/utils",
   "version": "0.0.1",
   "description": "Javascript and React utility library",
   "type": "module",
@@ -39,11 +39,11 @@
     "dayjs": "1.11.13"
   },
   "devDependencies": {
-    "@krak/eslint-config": "workspace:^",
-    "@krak/prettier-config": "workspace:^",
-    "@krak/rollup-config": "workspace:^",
-    "@krak/typescript-config": "workspace:*",
-    "@krak/vitest-config": "workspace:^",
+    "@krakstack/eslint-config": "workspace:^",
+    "@krakstack/prettier-config": "workspace:^",
+    "@krakstack/rollup-config": "workspace:^",
+    "@krakstack/typescript-config": "workspace:*",
+    "@krakstack/vitest-config": "workspace:^",
     "@types/global-types": "workspace:^",
     "@types/node": "22.10.2",
     "@types/react": ">=18",
@@ -61,14 +61,14 @@
   "author": "junhoKims",
   "keywords": ["utils", "javascript", "react", "typescript"],
   "files": ["dist", "README.md"],
-  "homepage": "https://github.com/junhoKims/krak/tree/main/packages/utils",
+  "homepage": "https://github.com/junhoKims/krakstack/tree/main/packages/utils",
   "repository": {
     "type": "git",
-    "url": "https://github.com/junhoKims/krak/tree/main",
+    "url": "https://github.com/junhoKims/krakstack.git",
     "directory": "packages/utils"
   },
   "bugs": {
-    "url": "https://github.com/junhoKims/krak/issues"
+    "url": "https://github.com/junhoKims/krakstack/issues"
   },
   "publishConfig": {
     "access": "public"

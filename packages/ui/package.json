@@ -1,5 +1,5 @@
 {
-  "name": "@krak/ui",
+  "name": "@krakstack/ui",
   "version": "0.0.1",
   "type": "module",
   "private": true,
@@ -45,10 +45,10 @@
     "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && rollup -c rollup.config.js --silent"
   },
   "devDependencies": {
-    "@krak/eslint-config": "workspace:*",
-    "@krak/prettier-config": "workspace:^",
-    "@krak/rollup-config": "workspace:^",
-    "@krak/typescript-config": "workspace:*",
+    "@krakstack/eslint-config": "workspace:*",
+    "@krakstack/prettier-config": "workspace:^",
+    "@krakstack/rollup-config": "workspace:^",
+    "@krakstack/typescript-config": "workspace:*",
     "@types/global-types": "workspace:^",
     "@types/node": "22.10.2",
     "@types/react": ">=18",

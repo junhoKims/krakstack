@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
-import { defineRollupConfig } from '@krak/rollup-config';
+import { defineRollupConfig } from '@krakstack/rollup-config';
 
 export default defineRollupConfig({
   entry: 'src',

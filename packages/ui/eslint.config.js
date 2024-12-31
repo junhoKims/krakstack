@@ -1,4 +1,4 @@
-import { reactInternalConfig } from '@krak/eslint-config';
+import { reactInternalConfig } from '@krakstack/eslint-config';
 
 /**
  * @type {import("eslint").Linter.Config}

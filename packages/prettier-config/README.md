@@ -1,4 +1,4 @@
-# `@krak/prettier-config`
+# `@krakstack/prettier-config`
 
 모노레포에서 사용할 내부 Prettier 설정 프리셋
 
@@ -18,7 +18,7 @@
 
 ```
 // prettier.config.js
-import { baseConfig } from '@krak/prettier-config';
+import { baseConfig } from '@krakstack/prettier-config';
 
 /**
  * @type {import("prettier").Config}

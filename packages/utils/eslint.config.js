@@ -1,4 +1,4 @@
-import { libraryConfig } from '@krak/eslint-config';
+import { libraryConfig } from '@krakstack/eslint-config';
 
 /**
  * @type {import("eslint").Linter.Config}

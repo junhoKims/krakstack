@@ -1,4 +1,4 @@
-# `@krak/typescript-config`
+# `@krakstack/typescript-config`
 
 모노레포에서 사용할 내부 TypeScript 설정 프리셋
 
@@ -19,7 +19,7 @@
 ```
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@krak/typescript-config/base.json"
+  "extends": "@krakstack/typescript-config/base.json"
 }
 ```
 
@@ -28,6 +28,6 @@
 ```
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@krak/typescript-config/react-internal.json"
+  "extends": "@krakstack/typescript-config/react-internal.json"
 }
 ```

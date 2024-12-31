@@ -1,4 +1,4 @@
-# `@krak/utils`
+# `@krakstack/utils`
 
 다양한 환경에서 사용할 수 있는 유틸리티 함수가 담겨있는 패키지
 
@@ -35,13 +35,13 @@ React:
 - `react`, `react-dom`, `@types/react` 등의 최소 18버전 이상의 패키지가 필요합니다.
 
 ```
-pnpm add @krak/utils
+pnpm add @krakstack/utils
 ```
 
 사용
 
 ```
-import { isClient } from '@krak/utils/commons';
+import { isClient } from '@krakstack/utils/commons';
 
 if (isClient()) {
   // 클라이언트 코드

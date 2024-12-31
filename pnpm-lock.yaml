@@ -8,10 +8,10 @@ importers:
 
   .:
     devDependencies:
-      '@krak/eslint-config':
+      '@krakstack/eslint-config':
         specifier: workspace:^
         version: link:packages/eslint-config
-      '@krak/typescript-config':
+      '@krakstack/typescript-config':
         specifier: workspace:^
         version: link:packages/typescript-config
       '@testing-library/dom':
@@ -65,7 +65,7 @@ importers:
 
   apps/next-app:
     dependencies:
-      '@krak/ui':
+      '@krakstack/ui':
         specifier: workspace:^
         version: link:../../packages/ui
       next:
@@ -78,13 +78,13 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
     devDependencies:
-      '@krak/eslint-config':
+      '@krakstack/eslint-config':
         specifier: workspace:^
         version: link:../../packages/eslint-config
-      '@krak/prettier-config':
+      '@krakstack/prettier-config':
         specifier: workspace:^
         version: link:../../packages/prettier-config
-      '@krak/typescript-config':
+      '@krakstack/typescript-config':
         specifier: workspace:^
         version: link:../../packages/typescript-config
       '@types/node':
@@ -184,16 +184,16 @@ importers:
 
   packages/ui:
     devDependencies:
-      '@krak/eslint-config':
+      '@krakstack/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
-      '@krak/prettier-config':
+      '@krakstack/prettier-config':
         specifier: workspace:^
         version: link:../prettier-config
-      '@krak/rollup-config':
+      '@krakstack/rollup-config':
         specifier: workspace:^
         version: link:../rollup-config
-      '@krak/typescript-config':
+      '@krakstack/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
       '@types/global-types':
@@ -221,19 +221,19 @@ importers:
         specifier: 1.11.13
         version: 1.11.13
     devDependencies:
-      '@krak/eslint-config':
+      '@krakstack/eslint-config':
         specifier: workspace:^
         version: link:../eslint-config
-      '@krak/prettier-config':
+      '@krakstack/prettier-config':
         specifier: workspace:^
         version: link:../prettier-config
-      '@krak/rollup-config':
+      '@krakstack/rollup-config':
         specifier: workspace:^
         version: link:../rollup-config
-      '@krak/typescript-config':
+      '@krakstack/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
-      '@krak/vitest-config':
+      '@krakstack/vitest-config':
         specifier: workspace:^
         version: link:../vitest-config
       '@types/global-types':

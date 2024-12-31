@@ -1,4 +1,4 @@
-# `@krak/vitest-config`
+# `@krakstack/vitest-config`
 
 모노레포에서 사용할 vitest 설정 프리셋
 
@@ -38,7 +38,7 @@ pnpm test:ui
 
 ```
 import { mergeConfig } from 'vite/config';
-import { reactInternalConfig } from '@krak/vitest-config;
+import { reactInternalConfig } from '@krakstack/vitest-config;
 
 export default mergeConfig(reactInternalConfig, defineConfig({
   test: {

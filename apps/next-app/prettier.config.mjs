@@ -1,4 +1,4 @@
-import { baseConfig } from '@krak/prettier-config';
+import { baseConfig } from '@krakstack/prettier-config';
 /**
  * @type {import("prettier").Config}
  */

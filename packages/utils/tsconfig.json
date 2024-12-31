@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@krak/typescript-config/react-internal.json",
+  "extends": "@krakstack/typescript-config/react-internal.json",
   "compilerOptions": {
     "types": [
       "node",

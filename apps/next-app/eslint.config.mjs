@@ -1,3 +1,3 @@
-import { nextConfig } from '@krak/eslint-config';
+import { nextConfig } from '@krakstack/eslint-config';
 
 export default nextConfig;

@@ -1,4 +1,4 @@
-# `@krak/rollup-config`
+# `@krakstack/rollup-config`
 
 rollup 번들링을 설정 생성해주는 함수를 구현한 저장소
 
@@ -17,7 +17,7 @@ rollup 번들링을 설정 생성해주는 함수를 구현한 저장소
 ```
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-import { defineRollupConfig } from '@krak/rollup-config';
+import { defineRollupConfig } from '@krakstack/rollup-config';
 
 export default defineRollupConfig({
   entry: 'src',
@@ -33,7 +33,7 @@ export default defineRollupConfig({
 ```
 import { fileURLToPath } from 'url';
 import { dirname, resolve } from 'path';
-import { defineRollupConfig } from '@krak/rollup-config';
+import { defineRollupConfig } from '@krakstack/rollup-config';
 
 export default defineRollupConfig({
   entry: 'src',

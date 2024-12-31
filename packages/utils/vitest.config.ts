@@ -1,6 +1,6 @@
 import path from 'path';
 import { defineConfig, mergeConfig } from 'vitest/config';
-import { reactInternalConfig } from '@krak/vitest-config';
+import { reactInternalConfig } from '@krakstack/vitest-config';
 
 export default mergeConfig(
   reactInternalConfig,

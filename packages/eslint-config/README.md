@@ -1,4 +1,4 @@
-# `@krak/eslint-config`
+# `@krakstack/eslint-config`
 
 모노레포에서 사용할 내부 ESLint 설정 프리셋
 
@@ -15,7 +15,7 @@
 단순 내부 설정 저장소 및 Root에서 ESLint 사용 시
 
 ```
-import { baseConfig } from '@krak/eslint-config;
+import { baseConfig } from '@krakstack/eslint-config;
 
 /**
  * @type {import('eslint').Linter.Config}
@@ -26,7 +26,7 @@ export default baseConfig;
 라이브러리에서 ESLint 사용
 
 ```
-import { libraryConfig } from '@krak/eslint-config;
+import { libraryConfig } from '@krakstack/eslint-config;
 
 /**
  * @type {import('eslint').Linter.Config}
@@ -42,7 +42,7 @@ export default [
 `react`가 포함된 라이브러리 또는 앱에서 ESLint 사용
 
 ```
-import { reactInternalConfig } from '@krak/eslint-config;
+import { reactInternalConfig } from '@krakstack/eslint-config;
 
 /**
  * @type {import('eslint').Linter.Config}

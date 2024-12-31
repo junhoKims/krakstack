@@ -1,7 +1,7 @@
 {
-  "name": "krak",
+  "name": "krakstack",
   "version": "1.0.0",
-  "description": "krak workspace",
+  "description": "각종 패키지 및 코드베이스 모노레포",
   "author": "junhoKims",
   "scripts": {
     "build": "turbo build",
@@ -13,8 +13,8 @@
     "clean:turbo": "rm -rf .turbo && pnpm -r exec rm -rf .turbo"
   },
   "devDependencies": {
-    "@krak/eslint-config": "workspace:^",
-    "@krak/typescript-config": "workspace:^",
+    "@krakstack/eslint-config": "workspace:^",
+    "@krakstack/typescript-config": "workspace:^",
     "@testing-library/dom": "10.4.0",
     "@testing-library/react": "16.1.0",
     "@vitest/coverage-v8": "2.1.8",

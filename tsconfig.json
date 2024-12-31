@@ -1,4 +1,4 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@krak/typescript-config/base.json"
+  "extends": "@krakstack/typescript-config/base.json"
 }
