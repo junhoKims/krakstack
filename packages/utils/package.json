@@ -8,11 +8,11 @@
     "**/*.css"
   ],
   "exports": {
-    "./common": {
-      "require": "./dist/common/index.cjs",
-      "import": "./dist/common/index.mjs",
-      "default": "./dist/common/index.mjs",
-      "types": "./dist/common/index.d.ts"
+    "./commons": {
+      "require": "./dist/commons/index.cjs",
+      "import": "./dist/commons/index.mjs",
+      "default": "./dist/commons/index.mjs",
+      "types": "./dist/commons/index.d.ts"
     },
     "./react": {
       "require": "./dist/react/index.cjs",

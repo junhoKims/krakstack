@@ -7,8 +7,8 @@ import type {
   DayjsUnitTypeLong,
   DayjsUnitTypeLongPlural,
   DayjsUnitTypeShort,
-} from '@/common/date-utils/dayjs.js';
-import { dayjs } from '@/common/date-utils/dayjs.js';
+} from '@/commons/date-utils/dayjs.js';
+import { dayjs } from '@/commons/date-utils/dayjs.js';
 
 /**
  * ### `dateUtils`

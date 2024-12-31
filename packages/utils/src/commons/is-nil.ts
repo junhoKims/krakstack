@@ -1,5 +1,5 @@
 /**
- * 대상이 "null" 또는 "undefined"인지 쉽게 찾아주는 유틸함수
+ * 대상이 "null" 또는 "undefined"인지 쉽게 찾아주는 유틸 함수
  *
  * @example
  * isNil(null) // true

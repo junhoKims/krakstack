@@ -1,4 +1,4 @@
-import { isNil } from '@/common/is-nil.js';
+import { isNil } from '@/commons/is-nil.js';
 
 describe('isNil', () => {
   test('인자가 "null" 또는 "undefined"이면 true를 반환', () => {

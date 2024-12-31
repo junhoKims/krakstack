@@ -1,4 +1,4 @@
-import { isEmpty } from '@/common/is-empty.js';
+import { isEmpty } from '@/commons/is-empty.js';
 
 describe('isEmpty', () => {
   test('인자가 "boolean", "number", "Symbol", "함수"면 true를 반환', () => {

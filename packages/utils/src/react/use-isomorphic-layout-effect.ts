@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect } from 'react';
-import { getIsClient } from '@/common/get-is-client.js';
+import { getIsClient } from '@/commons/get-is-client.js';
 
 /**
  *
