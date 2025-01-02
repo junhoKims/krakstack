@@ -39,6 +39,13 @@ describe('DateUtils', () => {
     const millisecond = dateUtils('2023-01-01 13:15:25.123').millisecond();
     expect(millisecond).toBe(123);
   });
+  test('valueOf()는 주어진 날짜의 타임스탬프 값을 반환', () => {
+    expect(dateUtils('2023-01-01').valueOf()).toBe(1672498800000);
+    expect(dateUtils('2023-01-01').unix()).toBe(1672498800);
+  });
+  test('날짜를 주면, 그 날짜의 월의 일 수를 반환', () => {
+    expect(dateUtils('2023-01-01').daysInMonth()).toBe(31);
+  });
   test('set()는 주어진 날짜의 특정 단위를 설정한 값을 반환', () => {
     const newDate = dateUtils('2023-01-01').set('year', 2020);
     expect(newDate.year()).toBe(2020);
@@ -82,11 +89,21 @@ describe('DateUtils', () => {
     const diff4 = dateUtils('2023-01-01').diff(INVALIDE_DATE, 'day');
     expect(diff4).toBe(NaN);
   });
+  test('`DateUtils`객체를 형식에 맞는 문자열 또는 JSON으로 변환', () => {
+    expect(dateUtils('2023-01-01').toJSON()).toBe('2022-12-31T15:00:00.000Z');
+    expect(dateUtils('2023-01-01').toISOString()).toBe('2022-12-31T15:00:00.000Z');
+    expect(dateUtils('2023-01-01').toString()).toBe('Sat, 31 Dec 2022 15:00:00 GMT');
+  });
   test('isValid()는 날짜가 올바른 날짜 포맷인지 여부를 반환', () => {
     const validDate = dateUtils('2023-01-01').toDate();
     const invalidDate = dateUtils('Fail').toDate();
     expect(dateUtils(validDate).isValid()).toBe(true);
     expect(dateUtils(invalidDate).isValid()).toBe(false);
+  });
+  test('시간대를 UTC로 바꾸거나 Offset을 구할 수 있다', () => {
+    expect(dateUtils('2023-01-01').format()).toBe('2023-01-01T00:00:00+09:00');
+    expect(dateUtils('2023-01-01').utc().format()).toBe('2022-12-31T15:00:00Z');
+    expect(dateUtils('2023-01-01').utcOffset()).toBe(540);
   });
   test('잘못된 문자열 입력 시 Invalid Date 반환', () => {
     const invalidDate = dateUtils('잘못된 날짜').toDate();
@@ -106,5 +123,18 @@ describe('DateUtils', () => {
     expect(thisisToday).toBe(true);
     const thisisNotToday = dateUtils().add(1, 'day').isToday();
     expect(thisisNotToday).toBe(false);
+  });
+  test('인자로 전달한 날짜보다 이전인지, 같은지, 이후인지 판단할 수 있다', () => {
+    expect(dateUtils('2023-01-01').isBefore('2023-01-02', 'day')).toBe(true);
+    expect(dateUtils('2023-01-01').isSame('2023-01-01', 'day')).toBe(true);
+    expect(dateUtils('2023-01-01').isAfter('2023-01-02', 'day')).toBe(false);
+  });
+
+  test('인자로 전달한 날짜가 오늘 기준으로 어제인지 내일인지 판단할 수 있다', () => {
+    expect(dateUtils().subtract(1, 'day').isYesterday()).toBe(true);
+    expect(dateUtils().add(1, 'day').isYesterday()).toBe(false);
+
+    expect(dateUtils().add(1, 'day').isTomorrow()).toBe(true);
+    expect(dateUtils().subtract(1, 'day').isTomorrow()).toBe(false);
   });
 });
