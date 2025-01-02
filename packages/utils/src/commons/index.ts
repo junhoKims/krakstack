@@ -5,3 +5,6 @@ export * from './is-empty.js';
 export * from './is-nil.js';
 export * from './sum.js';
 export * from './with-comma.js';
+export * from './omit.js';
+export * from './object-keys.js';
+export * from './pick.js';
