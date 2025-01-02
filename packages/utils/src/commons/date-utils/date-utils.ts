@@ -286,7 +286,7 @@ class DateUtils {
   /** 주어진 날짜의 타임스탬프 값을 반환
    *
    * @example
-   * dateUtils('2023-01-01').valueOf(); // => 1672531200000
+   * dateUtils('2023-01-01').valueOf(); // => 1672498800000
    */
   valueOf() {
     return this.#dateUtils.valueOf();
@@ -294,7 +294,7 @@ class DateUtils {
   /** 주어진 날짜의 유닉스 타임스탬프를 반환
    *
    * @example
-   * dateUtils('2023-01-01').unix(); // => 1672531200
+   * dateUtils('2023-01-01').unix(); // => 1672498800
    */
   unix() {
     return this.#dateUtils.unix();
@@ -344,7 +344,8 @@ class DateUtils {
    * 주어진 날짜를 utc 날짜로 변경
    *
    * @example
-   * dateUtils('2023-01-01').utc(); // => 2023-01-01T00:00:00.000Z의 Date 객체
+   * dateUtils('2023-01-01').utc().format; // => '2022-12-31T15:00:00Z'
+   * dateUtils('2023-01-01').format; // => '2023-01-01T00:00:00+09:00'
    */
   utc() {
     this.#dateUtils = this.#dateUtils.utc();
