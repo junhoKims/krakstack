@@ -1,3 +1,3 @@
 export const LineBase = () => {
-  return <div className="h-px w-full bg-gray-300" />;
+  return <div className="flex text-red-400">sssskdfn lsanfeelsnflasenf lsenf</div>;
 };

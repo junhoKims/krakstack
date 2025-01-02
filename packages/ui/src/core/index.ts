@@ -1,4 +1,4 @@
-import '@/styles/main.css';
+import '@/styles/styles.css';
 export * from '@/core/get-client.js';
 export * from '@/core/icon/index.js';
 export * from '@/core/ui-comp.js';

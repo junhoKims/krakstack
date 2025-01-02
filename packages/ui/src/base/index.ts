@@ -1,1 +1,1 @@
-export * from '@/base/line-base.js';
+export * from './line-base.js';
