@@ -1,6 +1,9 @@
 # 해당 파일을 참고하여 라벨링 수행
 # https://github.com/actions/labeler
 
+deploy:
+  - base-branch: ['^main', 'main']
+  
 feat:
   - head-branch: ['^feat', 'feat/']
 
