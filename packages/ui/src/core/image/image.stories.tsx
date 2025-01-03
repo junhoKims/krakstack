@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import type { ImageProps } from './image.js';
 
 const meta: Meta<ImageProps> = {
-  title: 'ui/core/Image',
+  title: 'ui/Image',
   component: Image,
   parameters: {
     layout: 'centered',

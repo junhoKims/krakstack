@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import type { DividerProps } from './divider.js';
 
 const meta: Meta<DividerProps> = {
-  title: 'ui/core/Divider',
+  title: 'ui/Divider',
   component: Divider,
   parameters: {
     layout: 'centered',

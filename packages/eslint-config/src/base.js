@@ -30,6 +30,12 @@ export const config = [
       '@typescript-eslint/consistent-type-imports': 'error',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/prefer-reduce-type-parameter': 'off',
+      '@typescript-eslint/restrict-template-expressions': [
+        'error',
+        {
+          allowNumber: true,
+        },
+      ],
     },
   }),
   {
