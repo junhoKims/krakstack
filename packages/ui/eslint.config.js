@@ -1,6 +1,6 @@
-import { reactInternalConfig } from '@krakstack/eslint-config';
+import { reactInternalConfig, storybookConfig } from '@krakstack/eslint-config';
 
 /**
  * @type {import("eslint").Linter.Config}
  */
-export default reactInternalConfig;
+export default [...reactInternalConfig, ...storybookConfig];

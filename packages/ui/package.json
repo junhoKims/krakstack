@@ -7,12 +7,6 @@
     "**/*.css"
   ],
   "exports": {
-    "./base": {
-      "require": "./dist/base/index.cjs",
-      "import": "./dist/base/index.mjs",
-      "default": "./dist/base/index.mjs",
-      "types": "./dist/base/index.d.ts"
-    },
     "./core": {
       "require": "./dist/core/index.cjs",
       "import": "./dist/core/index.mjs",
@@ -42,13 +36,21 @@
   "scripts": {
     "check:lint": "eslint --fix --cache .",
     "check:type": "tsc -p tsconfig.json --noEmit --incremental",
-    "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && rollup -c rollup.config.js --silent"
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && rollup -c rollup.config.js --silent",
+    "sb": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "@radix-ui/react-aspect-ratio": "1.1.1",
+    "clsx": "2.1.1",
+    "cva": "1.0.0-beta.2"
   },
   "devDependencies": {
     "@krakstack/eslint-config": "workspace:*",
     "@krakstack/prettier-config": "workspace:^",
     "@krakstack/rollup-config": "workspace:^",
     "@krakstack/typescript-config": "workspace:*",
+    "@storybook/addon-essentials": "8.4.7",
     "@types/global-types": "workspace:^",
     "@types/node": "22.10.2",
     "@types/react": ">=18",
