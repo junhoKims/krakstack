@@ -12,7 +12,6 @@ describe('getIsServer', () => {
   });
 
   it('window가 존재하는 클라이언트 환경에서 true를 반환', () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (globalThis.window as any) = undefined;
     expect(getIsServer()).toBe(true);
   });

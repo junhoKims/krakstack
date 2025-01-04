@@ -18,4 +18,7 @@ export const config = [
       ...pluginNext.configs['core-web-vitals'].rules,
     },
   },
+  {
+    ignores: ['.next/*'],
+  },
 ];
