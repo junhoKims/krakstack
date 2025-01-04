@@ -6,9 +6,10 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check:lint": "turbo check:lint",
+    "check:type": "turbo check:type",
+    "test": "turbo test",
     "clean": "rm -rf node_modules && pnpm -r exec rm -rf node_modules && pnpm -r exec rm -rf .next && pnpm store prune && pnpm install",
     "clean:turbo": "rm -rf .turbo && pnpm -r exec rm -rf .turbo"
   },
