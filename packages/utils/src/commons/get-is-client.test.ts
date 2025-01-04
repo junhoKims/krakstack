@@ -8,7 +8,6 @@ describe('getIsClient', () => {
   });
 
   it('window가 undefined인 서버 환경에서 false를 반환', () => {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (globalThis.window as any) = undefined;
     expect(getIsClient()).toBe(false);
   });
