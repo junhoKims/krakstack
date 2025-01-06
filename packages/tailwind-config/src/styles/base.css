@@ -1,0 +1,11 @@
+/**
+ * 폰트 설정 (Pretendard)
+ * @see https://github.com/orioncactus/pretendard
+ */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/variable/pretendardvariable-dynamic-subset.min.css');
+/**
+ * Tailwind 설정
+ */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
