@@ -8,3 +8,12 @@ export const IconName = Object.entries(icons).reduce(
   },
   {} as Record<keyof typeof icons, React.FC<React.SVGProps<SVGElement>>>
 );
+
+export type IconSize = ValueOf<typeof IconSize>;
+export const IconSize = {
+  xl: 32,
+  lg: 24,
+  md: 16,
+  sm: 12,
+  xs: 10,
+} as const;
