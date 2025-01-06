@@ -120,6 +120,9 @@ importers:
       '@krakstack/prettier-config':
         specifier: workspace:^
         version: link:../../packages/prettier-config
+      '@krakstack/tailwind-config':
+        specifier: workspace:^
+        version: link:../../packages/tailwind-config
       '@krakstack/typescript-config':
         specifier: workspace:^
         version: link:../../packages/typescript-config
