@@ -1,8 +1,8 @@
 categories:
   - title: '✨ Features'
     labels:
+      - 'feat'
       - 'feature'
-      - 'story'
       - 'refactor'
       - 'style'
   - title: '🐛 Bug Fixes'
