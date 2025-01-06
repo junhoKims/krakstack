@@ -4,7 +4,11 @@
 export default {
   content: ['./src/**/*.{js,jsx,ts,tsx,mdx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Pretendard Variable'],
+      },
+    },
   },
   plugins: [],
 };
