@@ -31,7 +31,8 @@ React:
 
 - [x] ESLint, Typescript 구성
 - [x] rollup으로 번들링되도록 구성
-- [ ] npm 패키지 배포
+- [x] npm 패키지 배포
+- [ ] vercel CI/CD 연동
 - [ ] 문서 개발
 
 ## 사용

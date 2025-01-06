@@ -1,9 +1,9 @@
-import { IconName } from '@/core/icon/constants.js';
+import { IconName, IconSize } from '@/core/icon/constants.js';
 
 export interface IconProps extends React.ComponentPropsWithoutRef<'svg'> {
   /** icon 이름 */
   icon: IconName;
-  size?: number;
+  size?: IconSize;
 }
 
 /**
@@ -11,7 +11,7 @@ export interface IconProps extends React.ComponentPropsWithoutRef<'svg'> {
  *
  * svgr/webpack을 사용한 svg 컴포넌트
  */
-export const Icon = ({ icon, size = 16, ...rest }: IconProps) => {
+export const Icon = ({ icon, size = IconSize.md, ...rest }: IconProps) => {
   const SVGIcon = IconName[icon] as React.FC<React.SVGProps<SVGSVGElement>>;
 
   return <SVGIcon width={size} height={size} {...rest} />;

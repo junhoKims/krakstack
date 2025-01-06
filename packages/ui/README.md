@@ -7,10 +7,11 @@
 할 일
 
 - [x] ESLint, Typescript 설정 구성
-- [ ] `tailwindcss` 설정 구성
-- [ ] `storybook` 설정 구성
+- [x] `tailwindcss` 설정 구성
+- [x] `storybook` 설정 구성
 - [ ] `Button` 컴포넌트 구현
 - [ ] npm 패키지 배포
+- [ ] vercel CI/CD 연동
 
 ## 사용
 
