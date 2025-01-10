@@ -24,6 +24,7 @@ React:
 - `createRequiredContext` - Provider 필수 사용을 강제하는 Context 생성 유틸 함수
 - `combineRef` - 인자로 받은 ref들을 모두 요소에 할당해주는 함수
 - `useIsomorphicLayoutEffect` - 클라이언트와 서버 모두에서 동작하는 Layout Effect Hook
+- `useOnViewport` - 특정 요소가 화면(viewport) 안에 존재하는지 여부를 반환하는 Hook
 
 ## TODOS
 
