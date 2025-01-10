@@ -6,6 +6,7 @@ export default mergeConfig(
   reactInternalConfig,
   defineConfig({
     test: {
+      setupFiles: ['./tests/setup-tests.ts'],
       coverage: {
         exclude: ['**/contexts.?(c|m)[jt]s?(x)'],
       },
