@@ -16,3 +16,7 @@ export declare const nextConfig: Linter.Config;
  * ESLint `react-internal` 설정
  */
 export declare const reactInternalConfig: Linter.Config;
+/**
+ * ESLint `storybook` 설정
+ */
+export declare const storybookConfig: Linter.Config;

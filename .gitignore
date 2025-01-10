@@ -46,3 +46,6 @@ yarn-error.log*
 .next/
 *.tsbuildinfo
 next-env.d.ts
+
+# Storybook
+*storybook.log

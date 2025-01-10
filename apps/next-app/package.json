@@ -19,6 +19,7 @@
   "devDependencies": {
     "@krakstack/eslint-config": "workspace:^",
     "@krakstack/prettier-config": "workspace:^",
+    "@krakstack/tailwind-config": "workspace:^",
     "@krakstack/typescript-config": "workspace:^",
     "@types/node": "^20",
     "@types/react": "^19",

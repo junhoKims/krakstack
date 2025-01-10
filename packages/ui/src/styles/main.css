@@ -1,3 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import '@krakstack/tailwind-config/src/styles/shadcn-ui.css';
+@import '@krakstack/tailwind-config/src/styles/base.css';
