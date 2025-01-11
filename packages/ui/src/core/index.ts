@@ -1,5 +1,6 @@
 import '../styles/main.css';
 
+export * from './accordion/index.js';
 export * from './divider/index.js';
 export * from './icon/index.js';
 export * from './image/index.js';
