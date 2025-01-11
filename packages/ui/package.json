@@ -2,7 +2,6 @@
   "name": "@krakstack/ui",
   "version": "0.0.1",
   "type": "module",
-  "private": true,
   "sideEffects": [
     "**/*.css"
   ],
@@ -42,6 +41,7 @@
   },
   "dependencies": {
     "@krakstack/utils": "workspace:^",
+    "@radix-ui/react-accordion": "1.2.2",
     "@radix-ui/react-aspect-ratio": "1.1.1",
     "clsx": "2.1.1",
     "cva": "1.0.0-beta.2"
