@@ -5,6 +5,7 @@
   "author": "junhoKims",
   "scripts": {
     "build": "turbo build",
+    "build:storybook": "turbo build:storybook",
     "dev": "turbo dev",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "check:lint": "turbo check:lint",
