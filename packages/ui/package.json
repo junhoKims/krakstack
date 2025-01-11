@@ -37,7 +37,7 @@
     "check:type": "tsc -p tsconfig.json --noEmit --incremental",
     "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && rollup -c rollup.config.js --silent",
     "sb": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build:storybook": "storybook build"
   },
   "dependencies": {
     "@krakstack/utils": "workspace:^",
