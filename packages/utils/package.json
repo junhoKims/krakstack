@@ -19,6 +19,12 @@
       "default": "./dist/react/index.mjs",
       "types": "./dist/react/index.d.ts"
     },
+    "./logics": {
+      "require": "./dist/logics/index.cjs",
+      "import": "./dist/logics/index.mjs",
+      "default": "./dist/logics/index.mjs",
+      "types": "./dist/logics/index.d.ts"
+    },
     "./*": {
       "require": "./dist/*/index.cjs",
       "import": "./dist/*/index.mjs",
