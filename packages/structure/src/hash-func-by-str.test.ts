@@ -1,4 +1,4 @@
-import { hashFuncByStr } from '@/logics/hash-func-by-str.js';
+import { hashFuncByStr } from '@/hash-func-by-str.js';
 
 describe('hashFuncByStr', () => {
   test('문자열을 인자로 넘기면 해당 문자열에 대한 해싱값을 리턴한다', () => {
