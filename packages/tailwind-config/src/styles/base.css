@@ -9,3 +9,11 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    font-size: calc(min(100vw, 450px) / 375 * 10);
+    font-family: Pretendard Variable;
+    letter-spacing: -0.02rem;
+  }
+}

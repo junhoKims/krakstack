@@ -47,7 +47,7 @@ export const UseClassname: Story = {
   },
   args: {
     as: 'p',
-    className: 'italic text-fp-base-red-500',
+    className: 'italic text-red-500',
     children: 'Typography 텍스트 컴포넌트',
   },
 };
