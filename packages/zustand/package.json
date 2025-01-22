@@ -1,0 +1,57 @@
+{
+  "name": "@krakstack/zustand",
+  "version": "0.0.1",
+  "description": "Custom State Management Tool uses Zustand",
+  "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "check:lint": "eslint --fix --cache .",
+    "check:type": "tsc -p tsconfig.json --noEmit --incremental",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage --silent",
+    "test:ui": "vitest --ui",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && rollup -c rollup.config.js --silent"
+  },
+  "dependencies": {
+    "zustand": "5.0.3"
+  },
+  "devDependencies": {
+    "@krakstack/eslint-config": "workspace:^",
+    "@krakstack/prettier-config": "workspace:^",
+    "@krakstack/rollup-config": "workspace:^",
+    "@krakstack/typescript-config": "workspace:^",
+    "@types/node": "22.10.7",
+    "@types/react": ">=18",
+    "@types/react-dom": ">=18",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "peerDependencies": {
+    "@types/react": ">=18",
+    "@types/react-dom": ">=18",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "license": "MIT",
+  "author": "junhoKims",
+  "keywords": [
+    "zustand"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/junhoKims/krakstack/tree/main/packages/zustand",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/junhoKims/krakstack.git",
+    "directory": "packages/zustand"
+  }
+}
