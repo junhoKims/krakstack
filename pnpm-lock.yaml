@@ -353,6 +353,9 @@ importers:
       '@krakstack/prettier-config':
         specifier: workspace:^
         version: link:../prettier-config
+      '@krakstack/rollup-config':
+        specifier: workspace:^
+        version: link:../rollup-config
       '@krakstack/typescript-config':
         specifier: workspace:^
         version: link:../typescript-config

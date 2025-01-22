@@ -3,12 +3,30 @@
   "version": "0.0.1",
   "description": "Custom State Management Tool uses Zustand",
   "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "default": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "check:lint": "eslint --fix --cache .",
+    "check:type": "tsc -p tsconfig.json --noEmit --incremental",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage --silent",
+    "test:ui": "vitest --ui",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && rollup -c rollup.config.js --silent"
+  },
   "dependencies": {
     "zustand": "5.0.3"
   },
   "devDependencies": {
     "@krakstack/eslint-config": "workspace:^",
     "@krakstack/prettier-config": "workspace:^",
+    "@krakstack/rollup-config": "workspace:^",
     "@krakstack/typescript-config": "workspace:^",
     "@types/node": "22.10.7",
     "@types/react": ">=18",

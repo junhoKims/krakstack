@@ -20,7 +20,7 @@
     },
     "check:type": {
       "outputLogs": "new-only",
-      "dependsOn": ["@krakstack/utils#build", "@krakstack/ui#build", "^check:type"],
+      "dependsOn": ["@krakstack/utils#build", "@krakstack/ui#build", "@krakstack/zustand#build", "^check:type"],
       "outputs": ["tsconfig.tsbuildinfo"]
     },
     "test": {
@@ -30,7 +30,7 @@
     "dev": {
       "cache": false,
       "persistent": true,
-      "dependsOn": ["@krakstack/utils#build", "@krakstack/ui#build"]
+      "dependsOn": ["@krakstack/utils#build", "@krakstack/ui#build", "@krakstack/zustand#build"]
     }
   }
 }
