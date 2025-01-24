@@ -36,6 +36,7 @@
     "check:lint": "eslint --fix --cache .",
     "check:type": "tsc -p tsconfig.json --noEmit --incremental",
     "test": "vitest run",
+    "test:type": "vitest run --typecheck",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage --silent",
     "test:ui": "vitest --ui",
