@@ -21,8 +21,10 @@ React:
 
 - `ErrorBoundary` - React 에러 처리를 위한 Error Boundary 컴포넌트
 - `useErrorBoundary` - Error Boundary를 명시적으로 노출 또는 리셋시킬 수 있는 기능이 담긴 Hook
-- `createRequiredContext` - Provider 필수 사용을 강제하는 Context 생성 유틸 함수
 - `combineRef` - 인자로 받은 ref들을 모두 요소에 할당해주는 함수
+- `createRequiredContext` - Provider 필수 사용을 강제하는 Context 생성 유틸 함수
+- `safeForwardRef` - forwardRef에서 발생하는 props 타입 오류를 방지하는 유틸 함수
+- `useDebounceState` - 디바운스 기능을 적용한 useState Hook
 - `useIsomorphicLayoutEffect` - 클라이언트와 서버 모두에서 동작하는 Layout Effect Hook
 - `useOnViewport` - 특정 요소가 화면(viewport) 안에 존재하는지 여부를 반환하는 Hook
 
@@ -33,7 +35,6 @@ React:
 - [x] ESLint, Typescript 구성
 - [x] rollup으로 번들링되도록 구성
 - [x] npm 패키지 배포
-- [ ] vercel CI/CD 연동
 - [ ] 문서 개발
 
 ## 사용
