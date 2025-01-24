@@ -2,6 +2,10 @@
 
 `react`에서 사용가능한 헤드리스 기반 UI를 제공하는 패키지
 
+## 확인
+
+https://krakstack-ui.vercel.app/
+
 ## TODOS
 
 할 일
@@ -11,7 +15,7 @@
 - [x] `storybook` 설정 구성
 - [ ] `Button` 컴포넌트 구현
 - [ ] npm 패키지 배포
-- [ ] vercel CI/CD 연동
+- [x] vercel CI/CD 연동
 
 ## 사용
 

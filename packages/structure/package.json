@@ -1,0 +1,19 @@
+{
+  "name": "@krakstack/structure",
+  "version": "0.0.1",
+  "description": "Structure package",
+  "author": "junhoKim",
+  "type": "module",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage --silent",
+    "test:ui": "vitest --ui"
+  },
+  "devDependencies": {
+    "@krakstack/typescript-config": "workspace:^",
+    "@krakstack/vitest-config": "workspace:^"
+  }
+}

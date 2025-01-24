@@ -45,7 +45,7 @@ const WrapperRatio = ({ ratio, children }: React.ComponentPropsWithoutRef<typeof
 };
 
 export const imageVariants = cva({
-  base: 'h-auto w-full max-w-full select-none object-cover fp-drag-none',
+  base: 'h-auto w-full max-w-full select-none object-cover krak-drag-none',
   variants: {
     ratio: {
       true: 'h-full',

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import './svgr.d.ts';
 import './img.d.ts';
 
@@ -43,4 +44,26 @@ declare global {
    * type ExampleKeys = ObjectKeys<typeof example>; // => 'a' | 'b'
    */
   export type ObjectKeys<T> = T extends Record<infer R, unknown> ? R : never;
+  /**
+   * 선택하려는 key의 타입이 보장되는 Omit 타입
+   *
+   * @example
+   * type Example = { a: string, b: number };
+   * type AfterExample = SafeOmit<Example, 'a'>; // => { b: number }
+   */
+  export type SafeOmit<T, K extends keyof T> = Omit<T, K>;
+  /**
+   * distribute 유니온 타입에서 작동하는 것을 보장하는 Omit 타입
+   *
+   * @example
+   * type Union = {
+   *   a: 'a';
+   *   user: string;
+   * } | {
+   *   b: 'b';
+   *   user: string;
+   * }
+   * type AfterUnion = DistributiveOmit<Union, 'user'>; // => { a: 'a' } | { b: 'b' }
+   */
+  export type DistributiveOmit<T, K extends PropertyKey> = T extends any ? Omit<T, K> : never;
 }
