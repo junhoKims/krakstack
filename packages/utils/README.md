@@ -1,59 +1,59 @@
 # `@krakstack/utils`
 
-다양한 환경에서 사용할 수 있는 유틸리티 함수가 담겨있는 패키지
+A utility package that can be used in various environments
 
-## 기능
+## Features
 
 Commons:
 
-- `isEmpty` - 빈배열, 빈객체, 빈문자열 여부를 확인하는 유틸 함수
-- `isNil` - null 또는 undefined 여부를 확인하는 유틸 함수
-- `omit` - 객체에서 특정 키쌍값을 제거하는 유틸 함수
-- `pick` - 객체에서 특정 키쌍값을 추출하는 유틸 함수
-- `sum` - 인자로 받은 숫자를 더한 값을 반환하는 유틸 함수
-- `objectKeys` - 리턴 타입을 명확하게 추론해주는 Object.keys 확장 함수
-- `getIsClient` - 클라이언트 환경 여부를 확인하는 유틸 함수
-- `getIsServer` - 서버 환경 여부를 확인하는 유틸 함수
-- `withComma` - 숫자에 천단위 콤마를 추가하는 포맷팅 유틸 함수
-- `dateUtils` - dayjs 기반의 날짜 조작 및 포맷팅 유틸 함수
+- `isEmpty` - Utility function to check for empty arrays, objects, or strings
+- `isNil` - Utility function to check for null or undefined
+- `omit` - Utility function to remove specific key-value pairs from an object
+- `pick` - Utility function to extract specific key-value pairs from an object
+- `sum` - Utility function that returns the sum of given numbers
+- `objectKeys` - Extended Object.keys function with accurate return type inference
+- `getIsClient` - Utility function to check client environment
+- `getIsServer` - Utility function to check server environment
+- `withComma` - Formatting utility function to add thousand separators to numbers
+- `dateUtils` - Date manipulation and formatting utilities based on dayjs
 
 React:
 
-- `ErrorBoundary` - React 에러 처리를 위한 Error Boundary 컴포넌트
-- `useErrorBoundary` - Error Boundary를 명시적으로 노출 또는 리셋시킬 수 있는 기능이 담긴 Hook
-- `combineRef` - 인자로 받은 ref들을 모두 요소에 할당해주는 함수
-- `createRequiredContext` - Provider 필수 사용을 강제하는 Context 생성 유틸 함수
-- `safeForwardRef` - forwardRef에서 발생하는 props 타입 오류를 방지하는 유틸 함수
-- `useDebounceState` - 디바운스 기능을 적용한 useState Hook
-- `useDebounceEffect` - 디바운스 기능을 적용한 Effect Hook
-- `useIsomorphicLayoutEffect` - 클라이언트와 서버 모두에서 동작하는 Layout Effect Hook
-- `useOnViewport` - 특정 요소가 화면(viewport) 안에 존재하는지 여부를 반환하는 Hook
+- `ErrorBoundary` - Error Boundary component for React error handling
+- `useErrorBoundary` - Hook containing functionality to explicitly expose or reset Error Boundary
+- `combineRef` - Function that assigns all received refs to an element
+- `createRequiredContext` - Utility function to create Context that enforces Provider usage
+- `safeForwardRef` - Utility function to prevent props type errors in forwardRef
+- `useDebounceState` - useState Hook with debounce functionality
+- `useDebounceEffect` - Effect Hook with debounce functionality
+- `useIsomorphicLayoutEffect` - Layout Effect Hook that works on both client and server
+- `useOnViewport` - Hook that returns whether a specific element exists within the viewport
 
 ## TODOS
 
-할 일
+To-do list
 
-- [x] ESLint, Typescript 구성
-- [x] rollup으로 번들링되도록 구성
-- [x] npm 패키지 배포
-- [ ] 문서 개발
+- [x] Configure ESLint, Typescript
+- [x] Configure bundling with rollup
+- [x] Deploy npm package
+- [ ] Develop documentation
 
-## 사용
+## Usage
 
-설치 
+Installation 
 
-- `react`, `react-dom`, `@types/react` 등의 최소 18버전 이상의 패키지가 필요합니다.
+- Requires minimum version 18 of packages such as `react`, `react-dom`, `@types/react`
 
 ```
 pnpm add @krakstack/utils
 ```
 
-사용
+Usage
 
 ```
 import { isClient } from '@krakstack/utils/commons';
 
 if (isClient()) {
-  // 클라이언트 코드
+  // Client code
 }
 ```
