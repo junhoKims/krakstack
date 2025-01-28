@@ -25,6 +25,7 @@ React:
 - `createRequiredContext` - Utility function to create Context that enforces Provider usage
 - `safeForwardRef` - Utility function to prevent props type errors in forwardRef
 - `useDebounceState` - useState Hook with debounce functionality
+- `useDebounceEffect` - Effect Hook with debounce functionality
 - `useIsomorphicLayoutEffect` - Layout Effect Hook that works on both client and server
 - `useOnViewport` - Hook that returns whether a specific element exists within the viewport
 
