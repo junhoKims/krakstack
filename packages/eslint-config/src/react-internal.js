@@ -32,7 +32,7 @@ export const config = [
       'react-hooks/exhaustive-deps': [
         'warn',
         {
-          additionalHooks: 'useIsomorphicLayoutEffect',
+          additionalHooks: '(useIsomorphicLayoutEffect|useDebounceEffect)',
         },
       ],
     },
