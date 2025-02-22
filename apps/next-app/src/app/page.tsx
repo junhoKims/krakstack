@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { Buttons } from '@/widgets/buttons';
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+        <Buttons />
       </main>
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
         <a
