@@ -8,5 +8,5 @@
     "sourceMap": true
   },
   "include": ["src"],
-  "exclude": ["**/*.test.*", "**/*.spec.*", "**/*.stories.*", "**/__storybook__/*", "dist", "build", "node_modules"]
+  "exclude": ["**/*.test.*", "**/*.spec.*", "**/*.stories.*", "**/__storybook__/*", "dist", "build", "node_modules", "**/*.md"]
 }
