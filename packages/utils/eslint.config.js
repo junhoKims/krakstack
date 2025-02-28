@@ -1,6 +1,6 @@
-import { libraryConfig } from '@krakstack/eslint-config';
+import { reactInternalConfig } from '@krakstack/eslint-config';
 
 /**
  * @type {import("eslint").Linter.Config}
  */
-export default libraryConfig;
+export default reactInternalConfig;

@@ -16,7 +16,7 @@ export const ButtonSize = {
 } as const;
 
 export const buttonVariants = cva({
-  base: 'inline-flex shrink-0 items-center justify-center gap-[0.4rem] rounded-[0.8rem] border-[0.1rem] border-solid transition-all',
+  base: 'inline-flex shrink-0 items-center justify-center gap-[0.4rem] rounded-[0.8rem] border-[0.1rem] border-solid transition-all bg-black',
   variants: {
     /** 버튼 모양 */
     variant: {

@@ -1,0 +1,33 @@
+name: 🚀 Deploy npm "utils" library
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-npm-utils:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+
+      - run: npm ci
+      - run: npm test
+      - uses: JS-DevTools/npm-publish@v3
+        id: publish
+        with:
+          token: ${{ secrets.NPM_TOKEN_DEPLOY_KRAKSTACK }}
+          package: "./packages/utils/package.json"
+
+      - if: ${{ steps.publish.outputs.type }}
+        run: |
+          echo "${{steps.publish.outputs.name}} Version Changed!"
+          echo "'${{steps.publish.outputs.old-version}}' -> '${{steps.publish.outputs.version}}'"
+
+
