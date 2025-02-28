@@ -41,9 +41,9 @@
     "test:coverage": "vitest run --coverage --silent",
     "test:ui": "vitest --ui",
     "build": "rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json && rollup -c rollup.config.js --silent",
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:preview": "vitepress preview docs"
+    "dev:docs": "vitepress dev docs",
+    "build:docs": "vitepress build docs",
+    "preview:docs": "vitepress preview docs"
   },
   "dependencies": {
     "dayjs": "1.11.13"
