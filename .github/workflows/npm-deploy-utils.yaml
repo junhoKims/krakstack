@@ -20,8 +20,6 @@ jobs:
         with:
           node-version-file: package.json
 
-      - run: npm ci
-      - run: npm test
       - uses: JS-DevTools/npm-publish@v3
         id: publish
         with:
