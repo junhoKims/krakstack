@@ -30,4 +30,4 @@ jobs:
         with:
           config-name: draft-release-note-config.yml
           name: krakstack-$RESOLVED_VERSION 🌈
-          tag: krakstack-$RESOLVED_VERSION 🌈
+          tag: krakstack-$RESOLVED_VERSION
