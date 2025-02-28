@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "krakstack - utils"
-  text: "simple utility library"
-  tagline: hello world
+  name: "@krakstack/utils"
+  text: "simple utils library"
+  tagline: We will implement simple functions for you instead.
   actions:
     - theme: alt
       text: commons utils
@@ -17,10 +17,10 @@ hero:
 
 features:
   - title: With typescript
-    details: Written in typescript, it is type-safe. It can be used in both javascript and typescript environments.
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: it is type-safe. It can be used in both javascript and typescript environments.
+  - title: Have React Utils
+    details: Provides hooks and APIs that complement the lack of type safety in React.
+  - title: Available on ESM
+    details: It can be used in ESM environment as well as CJS environment.
 ---
 

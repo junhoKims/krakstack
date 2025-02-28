@@ -2,10 +2,19 @@ import { parse, resolve } from 'path';
 import { defineConfig } from 'vitepress';
 import { globSync } from 'glob';
 
+const srcDir = resolve(import.meta.dirname, '../../');
+const srcExclude = [resolve(import.meta.dirname, '../../*.md')];
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'krakstack - utils',
-  description: 'simple utility library',
+  srcDir,
+  srcExclude,
+  title: '@krakstack/utils',
+  description: 'simple utils library',
+  rewrites: {
+    'docs/:page1': ':page1',
+    'src/:page1/:page2': ':page1/:page2',
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -35,19 +44,24 @@ export default defineConfig({
         ],
       },
     ],
-
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/junhoKims/krakstack/tree/main/packages/utils' }],
   },
 });
 
 function getMdItems(genre: string) {
-  const curPath = resolve(__dirname, `../../src/${genre}`);
+  const curPath = resolve(import.meta.dirname, `../../src/${genre}`);
 
   return globSync(resolve(curPath, '**/*.md')).map((file: string) => {
-    const filePath = parse(file);
+    const { name } = parse(file);
+    const relativePath = file.split('/packages/utils/src')[1]?.replace(/\.md$/, '');
+
+    if (!relativePath) {
+      throw new Error(`"relativePath" is not found: ${name}`);
+    }
+
     return {
-      text: filePath.name,
-      link: file.replace(/^\.\.\/\.\.\/src/, '').replace(/\.md$/, ''),
+      text: name,
+      link: relativePath,
     };
   });
 }
