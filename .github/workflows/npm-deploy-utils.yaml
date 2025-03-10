@@ -2,8 +2,8 @@ name: 🚀 Deploy npm "utils" library
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - '*'
 
 jobs:
   deploy-npm-utils:
@@ -20,13 +20,16 @@ jobs:
         with:
           node-version-file: package.json
 
-      - uses: JS-DevTools/npm-publish@v3
+      - name: Publish npm
+        uses: JS-DevTools/npm-publish@v3
         id: publish
         with:
           token: ${{ secrets.NPM_TOKEN_DEPLOY_KRAKSTACK }}
           package: "./packages/utils/package.json"
 
-      - if: ${{ steps.publish.outputs.type }}
+      - name: After published
+        if: ${{ steps.publish.outputs.type }}
         run: |
           echo "${{steps.publish.outputs.name}} Version Changed!"
           echo "'${{steps.publish.outputs.old-version}}' -> '${{steps.publish.outputs.version}}'"
+          gh workflow run .github/workflows/vercel-deploy-utils-docs-prod.yaml
