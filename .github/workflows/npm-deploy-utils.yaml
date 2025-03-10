@@ -5,6 +5,9 @@ on:
     tags:
       - '*'
 
+env:
+  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 jobs:
   deploy-npm-utils:
     permissions:
