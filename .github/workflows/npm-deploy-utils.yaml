@@ -34,4 +34,4 @@ jobs:
           echo "'${{steps.publish.outputs.old-version}}' -> '${{steps.publish.outputs.version}}'"
           gh workflow run .github/workflows/vercel-deploy-utils-docs-prod.yaml
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PAT_TOKEN_FOR_KRAKSTACK }}
