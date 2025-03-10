@@ -1,6 +1,6 @@
 {
   "name": "@krakstack/utils",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Javascript and React utility library",
   "type": "module",
   "sideEffects": [
