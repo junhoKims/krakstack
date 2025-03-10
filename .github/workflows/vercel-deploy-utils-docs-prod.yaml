@@ -1,4 +1,4 @@
-name: Vercel Deploy '@krakstack/utils' Docs production
+name: 🚀 Deploy vercel '@krakstack/utils' Docs production
 
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID_UTILS_DOCS }}
