@@ -14,10 +14,12 @@ export interface TypoProps<T extends keyof TypoHTMLTag = 'p'>
   color?: string;
 }
 
+const DEFAULT_TAG = 'p';
+
 /**
- * Typo 텍스트 컴포넌트 UI
+ * @krakstack `Typo` UI
  */
-export const Typo = <T extends keyof TypoHTMLTag = 'p'>({
+export const Typo = <T extends keyof TypoHTMLTag = typeof DEFAULT_TAG>({
   as,
   variant = TypoVariant.BodySRegular,
   color,
@@ -30,7 +32,7 @@ export const Typo = <T extends keyof TypoHTMLTag = 'p'>({
     return (
       <>
         {createElement(
-          'p',
+          DEFAULT_TAG,
           { className: typoVariants({ variant, className }), style: { color, ...style }, ...rest },
           children
         )}
