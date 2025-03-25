@@ -1,6 +1,7 @@
+/* eslint-disable import/order */
 import type { Metadata } from 'next';
-import '@krakstack/ui/styles-ui.css';
 import '@/app/globals.css';
+import '@krakstack/ui/styles-ui.css';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
