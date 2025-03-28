@@ -59,7 +59,8 @@
     "@types/react": ">=18",
     "@types/react-dom": ">=18",
     "react": ">=18",
-    "react-dom": ">=18"
+    "react-dom": ">=18",
+    "vite": "6.2.3"
   },
   "peerDependencies": {
     "@types/react": ">=18",
