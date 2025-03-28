@@ -54,7 +54,6 @@
     "@krakstack/rollup-config": "workspace:^",
     "@krakstack/tailwind-config": "workspace:^",
     "@krakstack/typescript-config": "workspace:*",
-    "@storybook/addon-essentials": "8.4.7",
     "@types/global-types": "workspace:^",
     "@types/node": "22.10.2",
     "@types/react": ">=18",
