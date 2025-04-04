@@ -1,3 +1,4 @@
+import { userEvent, within } from '@storybook/testing-library';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Typo } from '@/core/typo/typo.js';
 import { TypoVariant } from '@/core/typo/constants.js';
@@ -60,6 +61,31 @@ export const Default: Story = {
           </Radio>
         </div>
       </div>
+    );
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    await userEvent.click(
+      canvas.getByRole('radio', {
+        name(accessibleName, element) {
+          return accessibleName === 'Lorem typo 1' && element.getAttribute('name') === 'lg';
+        },
+      })
+    );
+    await userEvent.click(
+      canvas.getByRole('radio', {
+        name(accessibleName, element) {
+          return accessibleName === 'Lorem typo 2' && element.getAttribute('name') === 'lg';
+        },
+      })
+    );
+    await userEvent.click(
+      canvas.getByRole('radio', {
+        name(accessibleName, element) {
+          return accessibleName === 'Lorem typo 3' && element.getAttribute('name') === 'lg';
+        },
+      })
     );
   },
 };
