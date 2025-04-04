@@ -8,27 +8,27 @@
   "exports": {
     "./core": {
       "require": "./dist/core/index.cjs",
-      "import": "./dist/core/index.mjs",
-      "default": "./dist/core/index.mjs",
-      "types": "./dist/core/index.d.ts"
+      "types": "./dist/core/index.d.ts",
+      "default": "./dist/core/index.mjs"
+      
     },
     "./assets": {
       "require": "./dist/assets/index.cjs",
-      "import": "./dist/assets/index.mjs",
-      "default": "./dist/assets/index.mjs",
-      "types": "./dist/assets/index.d.ts"
+      "types": "./dist/assets/index.d.ts",
+      "default": "./dist/assets/index.mjs"
+      
     },
     "./configs": {
       "require": "./dist/configs/index.cjs",
-      "import": "./dist/configs/index.mjs",
-      "default": "./dist/configs/index.mjs",
-      "types": "./dist/configs/index.d.ts"
+      "types": "./dist/configs/index.d.ts",
+      "default": "./dist/configs/index.mjs"
+      
     },
     "./*": {
       "require": "./dist/*/index.cjs",
-      "import": "./dist/*/index.mjs",
-      "default": "./dist/*/index.mjs",
-      "types": "./dist/*/index.d.ts"
+      "types": "./dist/*/index.d.ts",
+      "default": "./dist/*/index.mjs"
+      
     },
     "./styles-ui.css": "./dist/styles/styles-ui.css"
   },
@@ -54,6 +54,7 @@
     "@krakstack/rollup-config": "workspace:^",
     "@krakstack/tailwind-config": "workspace:^",
     "@krakstack/typescript-config": "workspace:*",
+    "@krakstack/vitest-config": "workspace:^",
     "@types/global-types": "workspace:^",
     "@types/node": "22.10.2",
     "@types/react": ">=18",
