@@ -24,6 +24,7 @@ const config: StorybookConfig = {
   },
   core: {
     builder: '@storybook/builder-vite',
+    disableTelemetry: true,
   },
   async viteFinal(config) {
     const { mergeConfig } = await import('vite');
