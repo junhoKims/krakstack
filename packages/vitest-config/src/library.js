@@ -1,15 +1,11 @@
-import { configDefaults, defineConfig } from 'vitest/config';
-import { COVERAGE_EXCLUDES, EXCLUDES } from './constants.js';
+import { configDefaults, defineProject } from 'vitest/config';
+import { EXCLUDES } from './constants.js';
 
-export const config = defineConfig({
+export const config = defineProject({
   test: {
     environment: 'jsdom',
     globals: true,
+    setupFiles: ['@testing-library/jest-dom/vitest'],
     exclude: [...configDefaults.exclude, ...EXCLUDES],
-    coverage: {
-      enabled: false,
-      extension: ['.js', '.cjs', '.mjs', '.ts', '.cts', '.mts'],
-      exclude: [...(configDefaults.coverage.exclude ?? []), ...COVERAGE_EXCLUDES],
-    },
   },
 });

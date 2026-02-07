@@ -2,36 +2,12 @@
   "name": "@krakstack/utils",
   "version": "0.0.10",
   "description": "Javascript and React utility library",
+  "license": "MIT",
+  "author": "junhoKims",
   "type": "module",
   "sideEffects": [
     "**/*.css"
   ],
-  "exports": {
-    "./commons": {
-      "require": "./dist/commons/index.cjs",
-      "import": "./dist/commons/index.mjs",
-      "default": "./dist/commons/index.mjs",
-      "types": "./dist/commons/index.d.ts"
-    },
-    "./react": {
-      "require": "./dist/react/index.cjs",
-      "import": "./dist/react/index.mjs",
-      "default": "./dist/react/index.mjs",
-      "types": "./dist/react/index.d.ts"
-    },
-    "./logics": {
-      "require": "./dist/logics/index.cjs",
-      "import": "./dist/logics/index.mjs",
-      "default": "./dist/logics/index.mjs",
-      "types": "./dist/logics/index.d.ts"
-    },
-    "./*": {
-      "require": "./dist/*/index.cjs",
-      "import": "./dist/*/index.mjs",
-      "default": "./dist/*/index.mjs",
-      "types": "./dist/*/index.d.ts"
-    }
-  },
   "scripts": {
     "check:lint": "eslint --fix --cache .",
     "check:type": "tsc -p tsconfig.json --noEmit --incremental",
@@ -45,33 +21,17 @@
     "build:docs": "vitepress build docs",
     "preview:docs": "vitepress preview docs"
   },
-  "dependencies": {
-    "dayjs": "1.11.13"
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "devDependencies": {
-    "@krakstack/eslint-config": "workspace:^",
-    "@krakstack/prettier-config": "workspace:^",
-    "@krakstack/rollup-config": "workspace:^",
-    "@krakstack/typescript-config": "workspace:*",
     "@krakstack/vitest-config": "workspace:^",
-    "@types/glob": "8.1.0",
-    "@types/global-types": "workspace:^",
-    "@types/node": "22.10.2",
-    "@types/react": ">=18",
-    "@types/react-dom": ">=18",
-    "glob": "11.0.0",
-    "react": ">=18",
-    "react-dom": ">=18",
-    "vitepress": "1.6.3"
+    "@types/react": "19.2.13",
+    "@types/react-dom": "19.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
   },
-  "peerDependencies": {
-    "@types/react": ">=18",
-    "@types/react-dom": ">=18",
-    "react": ">=18",
-    "react-dom": ">=18"
-  },
-  "license": "MIT",
-  "author": "junhoKims",
   "keywords": [
     "utils",
     "javascript",

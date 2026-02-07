@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "@krakstack/typescript-config/vite.json",
+  "compilerOptions": {
+    "composite": true,
+    "types": ["react", "react-dom", "global-types", "vite/client"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src"]
+}

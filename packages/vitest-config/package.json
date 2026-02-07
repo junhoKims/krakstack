@@ -6,7 +6,9 @@
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
   "scripts": {
-    "check:lint": "eslint --fix --cache .",
-    "check:type": "tsc -p tsconfig.json --noEmit --incremental"
+    "check:lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --cache --cache-strategy content"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "6.9.1"
   }
 }

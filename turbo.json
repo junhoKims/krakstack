@@ -31,10 +31,13 @@
       "outputLogs": "new-only",
       "dependsOn": ["^test"]
     },
+    "test:coverage": {
+      "outputLogs": "new-only",
+      "dependsOn": ["^test:coverage"]
+    },
     "dev": {
       "cache": false,
-      "persistent": true,
-      "dependsOn": ["@krakstack/utils#build", "@krakstack/ui#build", "@krakstack/zustand#build"]
+      "persistent": true
     }
   }
 }

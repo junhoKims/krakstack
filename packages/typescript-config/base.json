@@ -2,20 +2,20 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Base",
   "compilerOptions": {
-    "incremental": false,
-    "declaration": true,
-    "declarationMap": true,
-    "resolveJsonModule": true,
-    "target": "ESNext",
-    "lib": ["ESNext", "dom", "dom.iterable"],
-    "strict": true,
     "esModuleInterop": true,
-    "isolatedModules": true,
     "skipLibCheck": true,
-    "noUncheckedIndexedAccess": true,
-    "verbatimModuleSyntax": true,
-    "module": "NodeNext",
+    "target": "ES2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
     "moduleDetection": "force",
-    "moduleResolution": "nodenext"
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "module": "preserve",
+    "lib": ["ES2022", "dom", "dom.iterable"]
   }
 }

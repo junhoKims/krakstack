@@ -3,22 +3,27 @@
   "version": "0.0.1",
   "private": true,
   "type": "module",
-  "main": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "default": "./src/index.js",
+      "types": "./src/index.d.ts"
+    },
+    "./react-refresh": {
+      "default": "./src/react-refresh/index.js",
+      "types": "./src/react-refresh/index.d.ts"
+    }
+  },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^15",
-    "@typescript-eslint/eslint-plugin": "8.18.0",
-    "@typescript-eslint/parser": "8.18.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-import": "2.31.0",
-    "eslint-plugin-only-warn": "^1.1.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-react": "7.37.2",
-    "eslint-plugin-react-hooks": "5.1.0",
-    "eslint-plugin-storybook": "0.12.0",
-    "eslint-plugin-turbo": "2.3.3",
-    "eslint-plugin-unused-imports": "4.1.4",
-    "globals": "15.13.0",
-    "typescript-eslint": "8.18.0"
+    "@eslint/js": "9.39.2",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-import-resolver-typescript": "4.4.4",
+    "eslint-plugin-import": "2.32.0",
+    "eslint-plugin-prettier": "5.5.5",
+    "eslint-plugin-react": "7.37.5",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.26",
+    "eslint-plugin-turbo": "2.8.3",
+    "globals": "17.3.0",
+    "typescript-eslint": "8.54.0"
   }
 }

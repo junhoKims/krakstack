@@ -1,13 +1,13 @@
-import type { ViteUserConfig } from 'vitest/config';
+import type { UserWorkspaceConfig } from 'vitest/config';
 
 /**
  * vitest `library` 설정
  */
-export declare const libraryConfig: ViteUserConfig;
+export declare const libraryConfig: UserWorkspaceConfig;
 
 /**
  * vitest `react-internal` 설정
  */
-export declare const reactInternalConfig: ViteUserConfig;
+export declare const reactInternalConfig: UserWorkspaceConfig;
 
-export type * from './constants.js';
+export * from './constants.js';

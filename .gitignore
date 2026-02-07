@@ -42,15 +42,12 @@ yarn-error.log*
 # ESLint
 .eslintcache
 
+# Typescript
+.tsbuildinfo
+.tsbuildinfo.*
+
 # Next
 .next/
 *.tsbuildinfo
 next-env.d.ts
 
-# Storybook
-*storybook.log
-storybook-static/
-
-# vitepress
-**/.vitepress/cache/
-**/.vitepress/dist/

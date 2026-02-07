@@ -1,0 +1,27 @@
+{
+  "name": "@krakstack/project-vite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "check:lint": "eslint \"**/*.{js,jsx,ts,tsx}\" --cache --cache-strategy content",
+    "check:type": "tsc --project tsconfig.type-check.json",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@types/global-types": "workspace:^",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "5.1.1",
+    "babel-plugin-react-compiler": "^1.0.0",
+    "vite": "^7.2.4"
+  }
+}
