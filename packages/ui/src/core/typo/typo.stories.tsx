@@ -37,6 +37,62 @@ export const Default: Story = {
   },
 };
 
+export const Variants: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: '`variants` props로 사이즈 변경 가능',
+      },
+    },
+  },
+  render: () => {
+    return (
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col">
+          <Typo variant={TypoVariant.CaptionRegular} className="text-slate-500">
+            Heading
+          </Typo>
+          <div className="flex flex-col gap-2">
+            <Typo variant={TypoVariant.HeadingL}>Typography 텍스트 컴포넌트</Typo>
+            <Typo variant={TypoVariant.HeadingM}>Typography 텍스트 컴포넌트</Typo>
+            <Typo variant={TypoVariant.HeadingS}>Typography 텍스트 컴포넌트</Typo>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <Typo variant={TypoVariant.CaptionRegular} className="text-slate-500">
+            Body M
+          </Typo>
+          <div className="flex flex-col gap-2">
+            <Typo variant={TypoVariant.BodyMBold}>Typography 텍스트 컴포넌트</Typo>
+            <Typo variant={TypoVariant.BodyMMedium}>Typography 텍스트 컴포넌트</Typo>
+            <Typo variant={TypoVariant.BodyMRegular}>Typography 텍스트 컴포넌트</Typo>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <Typo variant={TypoVariant.CaptionRegular} className="text-slate-500">
+            Body S
+          </Typo>
+          <div className="flex flex-col gap-2">
+            <Typo variant={TypoVariant.BodySBold}>Typography 텍스트 컴포넌트</Typo>
+            <Typo variant={TypoVariant.BodySMedium}>Typography 텍스트 컴포넌트</Typo>
+            <Typo variant={TypoVariant.BodySRegular}>Typography 텍스트 컴포넌트</Typo>
+          </div>
+        </div>
+        <div className="flex flex-col">
+          <Typo variant={TypoVariant.CaptionRegular} className="text-slate-500">
+            Caption
+          </Typo>
+          <div className="flex flex-col gap-2">
+            <Typo variant={TypoVariant.CaptionBold}>Typography 텍스트 컴포넌트</Typo>
+            <Typo variant={TypoVariant.CaptionMedium}>Typography 텍스트 컴포넌트</Typo>
+            <Typo variant={TypoVariant.CaptionRegular}>Typography 텍스트 컴포넌트</Typo>
+          </div>
+        </div>
+      </div>
+    );
+  },
+};
+
 export const UseClassname: Story = {
   parameters: {
     docs: {

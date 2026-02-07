@@ -4,18 +4,18 @@ export const typoVariants = cva({
   base: 'select-none',
   variants: {
     variant: {
-      HeadingL: 'text-[2.2rem] font-bold leading-[3rem] tracking-[-2%]',
-      HeadingM: 'text-[2rem] font-bold leading-[2.8rem] tracking-[-2%]',
-      HeadingS: 'text-[1.8rem] font-bold leading-[2.6rem] tracking-[-2%]',
-      BodyMBold: 'text-[1.6rem] font-bold leading-[2.2rem] tracking-[-2%]',
-      BodyMMedium: 'text-[1.6rem] font-semibold leading-[2.2rem] tracking-[-2%]',
-      BodyMRegular: 'text-[1.6rem] font-medium leading-[2.2rem] tracking-[-2%]',
-      BodySBold: 'text-[1.4rem] font-bold leading-8 tracking-[-2%]',
-      BodySMedium: 'text-[1.4rem] font-semibold leading-8 tracking-[-2%]',
-      BodySRegular: 'text-[1.4rem] font-medium leading-8 tracking-[-2%]',
-      CaptionBold: 'text-[1.2rem] font-bold leading-[1.8rem] tracking-[-2%]',
-      CaptionMedium: 'text-[1.2rem] font-semibold leading-[1.8rem] tracking-[-2%]',
-      CaptionRegular: 'text-[1.2rem] font-medium leading-[1.8rem] tracking-[-2%]',
+      HeadingL: 'text-[2.2rem] font-krak-bold leading-[3rem] tracking-[-0.02rem]',
+      HeadingM: 'text-[2rem] font-krak-semibold leading-[2.8rem] tracking-[-0.02rem]',
+      HeadingS: 'text-[1.8rem] font-krak-medium leading-[2.6rem] tracking-[-0.02rem]',
+      BodyMBold: 'text-[1.6rem] font-krak-semibold leading-[2.2rem] tracking-[-0.02rem]',
+      BodyMMedium: 'text-[1.6rem] font-krak-medium leading-[2.2rem] tracking-[-0.02rem]',
+      BodyMRegular: 'text-[1.6rem] font-krak-regular leading-[2.2rem] tracking-[-0.02rem]',
+      BodySBold: 'text-[1.4rem] font-krak-semibold leading-8 tracking-[-0.02rem]',
+      BodySMedium: 'text-[1.4rem] font-krak-medium leading-8 tracking-[-0.02rem]',
+      BodySRegular: 'text-[1.4rem] font-krak-regular leading-8 tracking-[-0.02rem]',
+      CaptionBold: 'text-[1.2rem] font-krak-semibold leading-[1.8rem] tracking-[-0.02rem]',
+      CaptionMedium: 'text-[1.2rem] font-krak-medium leading-[1.8rem] tracking-[-0.02rem]',
+      CaptionRegular: 'text-[1.2rem] font-krak-regular leading-[1.8rem] tracking-[-0.02rem]',
     },
   },
   defaultVariants: {
@@ -73,6 +73,7 @@ export type TypoHTMLTag = Pick<
   | 'code'
   | 'cite'
   | 'li'
+  | 'label'
 >;
 export const TypoHTMLTag = {
   p: 'p',
@@ -99,4 +100,5 @@ export const TypoHTMLTag = {
   code: 'code',
   cite: 'cite',
   li: 'li',
+  label: 'label',
 } as const;
