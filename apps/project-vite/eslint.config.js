@@ -1,9 +1,11 @@
+import pluginQuery from '@tanstack/eslint-plugin-query';
 import { reactRefreshViteConfig } from '@krakstack/eslint-config/react-refresh';
 import { reactInternalConfig } from '@krakstack/eslint-config';
 
 export default [
   ...reactInternalConfig,
   ...reactRefreshViteConfig,
+  ...pluginQuery.configs['flat/recommended'],
   {
     /**
      * public은 Node.js 모듈이 아니기 때문에 어떤 resolver로도 해석할 수 없음

@@ -3,6 +3,9 @@ import { Comp } from '@/components/Comp';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import '@/App.css';
+import { LuckyNumber } from '@/components/LuckyNumber';
+import { FortuneCookie } from '@/components/FortuneCookie';
+import { ObserverExample } from '@/components/OberverExample';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +21,18 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
+      <div>
+        <h5>Example</h5>
+        <div>
+          <LuckyNumber />
+          <LuckyNumber />
+          <FortuneCookie />
+        </div>
+        <div>
+          <h2>Hmm...</h2>
+          <ObserverExample />
+        </div>
+      </div>
       <div className="card">
         <button
           onClick={() => {
