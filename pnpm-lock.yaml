@@ -87,6 +87,9 @@ importers:
 
   apps/project-vite:
     dependencies:
+      '@krakstack/krak-query':
+        specifier: workspace:^
+        version: link:../../packages/krak-query
       '@tailwindcss/vite':
         specifier: 'catalog:'
         version: 4.1.18(vite@7.3.1(@types/node@25.2.1)(jiti@2.6.1)(lightningcss@1.30.2))
@@ -162,6 +165,8 @@ importers:
         version: 8.54.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
 
   packages/global-types: {}
+
+  packages/krak-query: {}
 
   packages/prettier-config: {}
 

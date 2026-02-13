@@ -1,0 +1,19 @@
+{
+  "name": "@krakstack/krak-query",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "if [ \"$NODE_ENV\" = \"production\" ]; then tsc -b tsconfig.prod.json --force; else tsc -b tsconfig.json --force; fi",
+    "check:type": "tsc -p tsconfig.type-check.json --noEmit --incremental"
+  }
+}

@@ -36,6 +36,7 @@
       "dependsOn": ["^test:coverage"]
     },
     "dev": {
+      "dependsOn": ["@krakstack/krak-query#build"],
       "cache": false,
       "persistent": true
     }

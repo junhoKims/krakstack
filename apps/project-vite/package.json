@@ -12,6 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@krakstack/krak-query": "workspace:^",
     "@tailwindcss/vite": "catalog:",
     "@tanstack/eslint-plugin-query": "^5.91.4",
     "@tanstack/react-query": "^5.90.21",
