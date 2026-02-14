@@ -1,16 +1,14 @@
+import { defineConfig } from 'eslint/config';
 import { config as baseConfig } from './base.js';
 
-/**
- * @type {import("eslint").Linter.Config}
- */
-export const config = [
+export const config = defineConfig([
   ...baseConfig,
   {
-    name: 'Additional Rules',
+    name: 'library/Additional Rules',
+    files: ['**/*.{ts,tsx,d.cts,d.ts,d.mts}'],
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unnecessary-type-parameters': 'off',
-      '@typescript-eslint/only-throw-error': 'off',
     },
   },
-];
+]);

@@ -1,10 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "React Internal",
-  "extends": "./base.json",
+  "extends": "./library.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "noEmit": true
+    "jsx": "react-jsx"
   }
 }

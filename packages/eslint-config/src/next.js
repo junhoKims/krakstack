@@ -1,24 +1,21 @@
-import pluginNext from '@next/eslint-plugin-next';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import nextPlugin from '@next/eslint-plugin-next';
 import { config as reactInternalConfig } from './react-internal.js';
-import { config as baseConfig } from './base.js';
 
-/**
- * @type {import("eslint").Linter.Config}
- */
-export const config = [
-  ...baseConfig,
+export const config = defineConfig([
+  globalIgnores(['.next/**', 'out/**', 'next-env.d.ts']),
   ...reactInternalConfig,
+  ...nextVitals,
   {
-    name: 'Config next plugin',
+    name: 'next/@next/eslint-plugin-next Config',
+    files: ['**/*.{js,jsx,ts,tsx}'],
     plugins: {
-      '@next/next': pluginNext,
+      '@next/next': nextPlugin,
     },
     rules: {
-      ...pluginNext.configs.recommended.rules,
-      ...pluginNext.configs['core-web-vitals'].rules,
+      ...nextPlugin.configs.recommended.rules,
+      ...nextPlugin.configs['core-web-vitals'].rules,
     },
   },
-  {
-    ignores: ['.next/*'],
-  },
-];
+]);

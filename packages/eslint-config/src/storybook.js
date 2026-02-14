@@ -1,6 +1,7 @@
+import { defineConfig } from 'eslint/config';
 import storybookPlugin from 'eslint-plugin-storybook';
 
-export const config = [
+export const config = defineConfig([
   ...storybookPlugin.configs['flat/recommended'],
   {
     // https://github.com/storybookjs/eslint-plugin-storybook?tab=readme-ov-file#installation
@@ -13,4 +14,4 @@ export const config = [
     files: ['**/*.stories.@(ts|tsx|js|jsx|mjs|cjs)'],
     rules: {},
   },
-];
+]);

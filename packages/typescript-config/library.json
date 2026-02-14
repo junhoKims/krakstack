@@ -1,5 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Library",
-  "extends": "./base.json"
+  "extends": "./base.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "NodeNext",
+    "sourceMap": true,
+    "declaration": true
+  }
 }
